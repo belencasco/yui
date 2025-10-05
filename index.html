@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ejercicio 11 - Numeros del 1 al 20</title>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card" role="region" aria-label="Ejercicio comprobar valor">
+    <h2> Ejercicio 11: Numeros impares del 1 al 20 </h2>
+
+    <div class="instrucciones">
+      
+      <p> Operador modulo (%) dentro de un bucle for para filtrar los numeros impares del <strong>1 al 20.</strong>
+    </div>
+
+  
+    <div class="numeros"  aria-live="polite">Haz clic en "mostrar numeros".</div>
+
+  
+    <button id="btnejecutar" class="btn" type="button">¡MOSTRAR NUMEROS!</button>
+
+     <ul id="listaNumeros" aria-label="Lista de números"></ul>
+       
+  </div>
+
+
+  <script>
+    function lista() {
+        const lista = document.getElementById("listaNumeros"); 
+        lista.innerHTML="";
+        
+        
+   for (let numeros = 1;numeros<=20;numeros++) {
+       if (numeros % 2 !== 0) 
+       lista.innerHTML += `<li>${numeros}</li>`; 
+      
+       }
+    }
+  window.onload = function() {
+    const button = document.getElementById("btnejecutar");
+   button.onclick = lista;  
+       
+       };
+ 
+  </script>
+</body>
+</html>
